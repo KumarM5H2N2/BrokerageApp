@@ -1,0 +1,14 @@
+{
+  "name": "brokerageapp",
+  "version": "1.0.0",
+  "description": "Brokerage in Bank financing 2.0 : Your Key to get started your Real Estate Project !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
