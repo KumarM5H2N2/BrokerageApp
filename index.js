@@ -21,8 +21,11 @@ const httpServer = createServer(expressApp);
 
 //By convention, we'll name a primitive variable in uppercase, to make it clear
 //that its value cannot change.
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3002;
+
+
+
 
 httpServer.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`);
-  });
+  console.log(`http://localhost:${PORT}coucou`);
+});
