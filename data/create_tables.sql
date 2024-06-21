@@ -19,7 +19,7 @@ CREATE TABLE "clientfile" (
     "maritalstatus" text NOT NULL,
     "nationality" text NOT NULL,
     "residence status" text NOT NULL,
-    "address" text NOT NULL
+    "address" text NOT NULL,
     "created_at" timestamptz NOT NULL DEFAULT now(),
     "updated_at" timestamptz
 
