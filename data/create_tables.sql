@@ -18,7 +18,7 @@ CREATE TABLE "clientfile" (
     "numberchild" int NOT NULL,
     "maritalstatus" text NOT NULL,
     "nationality" text NOT NULL,
-    "residence status" text NOT NULL,
+    "residencestatus" text NOT NULL,
     "address" text NOT NULL,
     "created_at" timestamptz NOT NULL DEFAULT now(),
     "updated_at" timestamptz
@@ -55,7 +55,7 @@ CREATE TABLE "incomedistribution" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "incometype" text NOT NULL,
   "owner" text NOT NULL,
-  "annual sum" int NOT NULL,
+  "annualsum" int NOT NULL,
  
   "clientfile_id" INTEGER NOT NULL REFERENCES "clientfile"("id") ON DELETE CASCADE,
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -66,7 +66,7 @@ CREATE TABLE "incomedistribution" (
 CREATE TABLE "expensesotherthancredit" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "nature" text NOT NULL,
-  "annual sum" text NOT NULL,
+  "annualsum" int NOT NULL,
   
   "clientfile_id" INTEGER NOT NULL REFERENCES "clientfile"("id") ON DELETE CASCADE,
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -78,7 +78,7 @@ CREATE TABLE "creditdistribution" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "credittype" text NOT NULL,
   "owner" text NOT NULL,
-  "annual sum" int NOT NULL,
+  "annualsum" int NOT NULL,
   "remainingcapitaldue" int NOT NULL,
   "creditorbank" text NOT NULL,
 
@@ -102,8 +102,8 @@ CREATE TABLE "useraccess" (
 CREATE TABLE "useraccess_has_clientfile" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 
-  "useraccess_id" INTEGER NOT NULL REFERENCES "useraccess"("id)") ON DELETE CASCADE,
-  "clientfile_id" INTEGER NOT NULL REFERENCES "clientfile"("id)") ON DELETE CASCADE,
+  "useraccess_id" INTEGER NOT NULL REFERENCES "useraccess"("id") ON DELETE CASCADE,
+  "clientfile_id" INTEGER NOT NULL REFERENCES "clientfile"("id") ON DELETE CASCADE,
 
   UNIQUE ("useraccess_id", "clientfile_id"),
 
