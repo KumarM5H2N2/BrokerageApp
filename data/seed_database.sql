@@ -21,4 +21,16 @@ VALUES
   ('jeanluc.montpellier@hotmail.com', 'Jean-Luc', 'GIRARD', '1976-02-18', 'Anne', 'GIRARD', '1977-11-09', 2, 'marié', 'française', 'locataire', '3 rue Foch 34000 MONTPELLIER')
   ;
 
+
+
+
+INSERT INTO "savingsdistribution" 
+  (savingstype, holder, estimatedvalue, financialinstitute,clientfile_id)
+VALUES
+  ('Livret A', 'Maxime', 15000, 'banque BNP', 1),
+  ('Assurance-vie', 'Elsa','16500', 'banque LCL', 1),
+  ('Livret PEA', 'Robert','2300', 'banque populaire Rives de Paris', 2)
+;
+
+
 COMMIT;

@@ -28,7 +28,7 @@ CREATE TABLE "clientfile" (
 CREATE TABLE "savingsdistribution" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "savingstype" text NOT NULL,
-  "owner" text NOT NULL,
+  "holder" text NOT NULL,
   "estimatedvalue" int NOT NULL,
   "financialinstitute" text NOT NULL,
 
@@ -41,7 +41,7 @@ CREATE TABLE "savingsdistribution" (
 CREATE TABLE "realestatedistribution" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "realestatetype" text NOT NULL,
-  "owner" text NOT NULL,
+  "holder" text NOT NULL,
   "estimatedvalue" int NOT NULL,
   "date aquisition" date NOT NULL,
 
@@ -54,7 +54,7 @@ CREATE TABLE "realestatedistribution" (
 CREATE TABLE "incomedistribution" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "incometype" text NOT NULL,
-  "owner" text NOT NULL,
+  "holder" text NOT NULL,
   "annualsum" int NOT NULL,
  
   "clientfile_id" INTEGER NOT NULL REFERENCES "clientfile"("id") ON DELETE CASCADE,
@@ -77,7 +77,7 @@ CREATE TABLE "expensesotherthancredit" (
 CREATE TABLE "creditdistribution" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "credittype" text NOT NULL,
-  "owner" text NOT NULL,
+  "holder" text NOT NULL,
   "annualsum" int NOT NULL,
   "remainingcapitaldue" int NOT NULL,
   "creditorbank" text NOT NULL,
