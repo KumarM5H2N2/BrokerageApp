@@ -11,7 +11,48 @@ Clientfile.init({
   firstname1: {
     type: DataTypes.TEXT,
     allowNull: false
+  },
+   lastname1: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  datebirth1: {
+    type: DataTypes.DATE,
+    allowNull: false
+  },
+  firstname2: {
+    type: DataTypes.TEXT,
+    allowNull: true
+  },
+  lastname2: {
+    type: DataTypes.TEXT,
+    allowNull: true
+  },
+  datebirth2: {
+    type: DataTypes.DATE,
+    allowNull: true
+  },
+  numberchild: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  maritalstatus: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  nationality: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  residencestatus: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  address: {
+    type: DataTypes.TEXT,
+    allowNull: false
   }
+
 }, {
   sequelize, /* DB connection instance */
   tableName: "clientfile"

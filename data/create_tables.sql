@@ -43,7 +43,7 @@ CREATE TABLE "realestatedistribution" (
   "realestatetype" text NOT NULL,
   "holder" text NOT NULL,
   "estimatedvalue" int NOT NULL,
-  "date aquisition" date NOT NULL,
+  "dateaquisition" date NOT NULL,
 
   "clientfile_id" INTEGER NOT NULL REFERENCES "clientfile"("id") ON DELETE CASCADE,
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
