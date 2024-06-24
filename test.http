@@ -1,7 +1,8 @@
 
-### Brokerage data recovry
+
 @endpoint=http://localhost:{{$dotenv PORT}}
 
 
+### Brokerage data recovry
+GET {{endpoint}}/brokerage
 
-GET {{endpoint}}/brokeragee

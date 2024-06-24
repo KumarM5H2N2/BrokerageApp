@@ -7,6 +7,9 @@ const router = Router();
 router.get('/brokerage', controller.getAllclientfile);
 router.get('/brokeragee', controller.getAlluseraccess);
   
+router.post('/brokerage', controller.createClientfile);
+
+
   /*
 // Not Found Middleware (404)
 router.use((req, res) => {
