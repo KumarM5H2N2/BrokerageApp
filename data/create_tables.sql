@@ -65,8 +65,8 @@ CREATE TABLE "incomedistribution" (
 
 CREATE TABLE "expensesotherthancredit" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  "nature" text NOT NULL,
-  "annualsum" int NOT NULL,
+  "nature" text,
+  "annualsum" int,
   
   "clientfile_id" INTEGER NOT NULL REFERENCES "clientfile"("id") ON DELETE CASCADE,
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),

@@ -4,7 +4,7 @@ BEGIN;
 INSERT INTO "clientfile"
   ("email", "firstname1", "lastname1", "datebirth1", "firstname2", "lastname2", "datebirth2","numberchild", "maritalstatus", "nationality", "residencestatus","address" )
 VALUES
-  ('maxime85@laposte.net', 'Maxime', 'LOYAL', '1985-05-21', 'Elsa', 'LOYAL', '1986-02-14', 2, 'marié', 'française', 'locataire', '2 chemin du port 14000 CAEN'),
+  ('maxime85@laposte.net', 'Maxime', 'LOYAL', '1985-05-21', 'Elsa', 'LOYAL', '1986-02-14', 2, 'marié', 'française', 'propriétaire', '2 chemin du port 14000 CAEN'),
   ('robert63@lycos.fr', 'Robert', 'VALDO', '1975-02-13', 'Jeanne', 'LIBET', '1975-01-28', 4, 'union libre', 'française', 'propriétaire', '15 rue du soleil 84000 AVIGNON'),
   ('julieparis75@gmail.com', 'Julie', 'DUPONT', '1990-03-15', 'Pierre', 'DUPONT', '1989-11-30', 1, 'marié', 'française', 'locataire', '10 avenue des Champs-Élysées 75008 PARIS'),
   ('alain56@free.fr', 'Alain', 'MARTIN', '1965-08-19', 'Sophie', 'MARTIN', '1967-07-22', 3, 'marié', 'française', 'propriétaire', '25 boulevard de la Liberté 59000 LILLE'),
@@ -31,6 +31,76 @@ VALUES
   ('Assurance-vie', 'Elsa','16500', 'banque LCL', 1),
   ('Livret PEA', 'Robert','2300', 'banque populaire Rives de Paris', 2)
 ;
+
+
+
+
+
+INSERT INTO "realestatedistribution" 
+  (realestatetype, holder, estimatedvalue, dateaquisition,clientfile_id)
+VALUES
+  ('appartement T3', 'Maxime', 225000, '2010-06-01', 1),
+  ('garage', 'Elsa','40000', '2011-04-03', 1),
+  ('pavillon', 'Robert','430000', '1998-02-25', 2)
+;
+
+
+INSERT INTO "incomedistribution" 
+  (incometype, holder, annualsum,clientfile_id)
+VALUES
+  ('salaire', 'Maxime', 33000, 1),
+  ('auto-entrepreneur', 'Elsa','34500', 1),
+  ('salaire', 'Robert','55000', 2)
+;
+
+
+INSERT INTO "expensesotherthancredit" 
+  (nature, annualsum,clientfile_id)
+VALUES
+  ('aide familiale', '1300', 1),
+  ('pension alimentaire','900', 2)
+;
+
+
+INSERT INTO "creditdistribution" 
+  (credittype, holder, annualsum, remainingcapitaldue, creditorbank,clientfile_id)
+VALUES
+  ('credit auto', 'Maxime', 7000, '12000','cetelem', 1),
+  ('credit travaux', 'Elsa','1500', '3400', 'cofinoga',1),
+  ('credit rénovation', 'Robert','18000','37500', 'banque populaire Rives de Paris', 2)
+;
+
+
+
+INSERT INTO "useraccess" 
+  (email, prenom, nom)
+VALUES
+  ('jeanleduc@boursorama.fr', 'Jean', 'Leduc'),
+  ('isabellepleux@socgen.fr', 'Isabelle','Pleux'),
+  ('Bob@brokerage.fr', 'Bob','Guipasse')
+;
+
+
+INSERT INTO "useraccess_has_clientfile" 
+  (useraccess_id, clientfile_id) 
+VALUES 
+  (3, 1), -- Bob@brokerage.fr -- maxime85@laposte.net
+  (2, 2) -- isabellepleux@socgen.fr -- robert63@lycos.fr
+ 
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 COMMIT;
