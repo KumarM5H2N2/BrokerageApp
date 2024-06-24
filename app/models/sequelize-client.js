@@ -5,8 +5,10 @@ import dotenv from "dotenv";
 //Load environment variables from the .env file
 dotenv.config();
 
+
 //View PG_URL to debug
 console.log("PG_URL:", process.env.PG_URL);
+
 
 // Vérifier que PG_URL est bien définie
 if (!process.env.PG_URL) {
