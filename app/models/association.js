@@ -36,7 +36,7 @@ Savingsdistribution.findOne({ include: "clientfile" }).then(res => console.log(r
 // Useraccess <---> Clientfile
 // Many-to-Many
 
-export const CardHasTag = sequelize.define("useraccess_has_clientfile", {}, { tableName: "useraccess_has_clientfile" });
+export const UseraccessHasClientfile = sequelize.define("useraccess_has_clientfile", {}, { tableName: "useraccess_has_clientfile" });
 
 
 

@@ -4,7 +4,7 @@ const router = Router();
 
 
 
-router.get('/brokerage', controller.getBrokerage);
+router.get('/brokerage', controller.getAllclientfile);
 
 
 
