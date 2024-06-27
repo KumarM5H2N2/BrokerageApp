@@ -1,5 +1,6 @@
+import { Clientfile } from '../models/index.js';
 
-import { Clientfile, Savingsdistribution, Useraccess, UseraccessHasClientfile } from '../models/index.js';
+
 
 
 export async function getAllclientfile(req,res) {
@@ -7,11 +8,6 @@ export async function getAllclientfile(req,res) {
     res.json(clientfile);
 }
 
-
-export async function getAlluseraccess(req,res) {
-    const useraccess = await Useraccess.findAll();
-    res.json(useraccess);
-}
 
 
 export async function createClientfile(req, res) {
@@ -131,20 +127,7 @@ res.status(500).json({error:"Unexpected server error. Please try come back later
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 export default {
-    getAllclientfile, getAlluseraccess, createClientfile
+  getAllclientfile,
+  createClientfile
 };
-
-
