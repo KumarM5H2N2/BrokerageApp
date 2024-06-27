@@ -29,7 +29,7 @@ INSERT INTO "savingsdistribution"
 VALUES
   ('Livret A', 'Maxime', 15000, 'banque BNP', 1),
   ('Assurance-vie', 'Elsa','16500', 'banque LCL', 1),
-  ('Livret PEA', 'Robert','2300', 'banque populaire Rives de Paris', 2)
+  ('Livret PEA', 'Claire','2300', 'banque populaire Rives de Paris', 5)
 ;
 
 

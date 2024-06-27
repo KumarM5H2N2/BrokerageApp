@@ -10,6 +10,17 @@ router.post('/clientfiles', controller.createClientfile);
 router.delete("/clientfiles/:id", controller.deleteClientfile);
 router.patch("/clientfiles/:id", controller.updateClientfile);
 
+
+
+
+router.get('/savingsdistributions', controller.getAllSavingsdistribution);
+router.post('/savingsdistributions', controller.createSavingsdistribution);
+
+/*
+Bonus 
+router.get("/clientfiles/:id/savingsdistribution", (savingsdistribution.getAllSavingsdistributionOfClientfile));
+*/
+
 router.get('/brokeragee', controller.getAlluseraccess);
 
   /*
