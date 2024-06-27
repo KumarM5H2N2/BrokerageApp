@@ -1,10 +1,20 @@
 import { getAlluseraccess } from './useraccessController.js';
-import { createClientfile, getAllclientfile } from './clientfileController.js';
+import { createClientfile, getAllclientfile, getOneClientfile,deleteClientfile,updateClientfile} from './clientfileController.js';
+
+
+
+
+
+
+
 
 const controller = {
   getAllclientfile,
-  getAlluseraccess,
-  createClientfile
+  getOneClientfile,
+  createClientfile,
+  deleteClientfile,
+  updateClientfile,
+  getAlluseraccess 
 };
 
 export default controller;

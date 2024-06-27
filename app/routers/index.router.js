@@ -4,11 +4,13 @@ const router = Router();
 
 
 
-router.get('/brokerage', controller.getAllclientfile);
-router.get('/brokeragee', controller.getAlluseraccess);
-  
-router.post('/brokerage', controller.createClientfile);
+router.get('/clientfiles', controller.getAllclientfile);
+router.get('/clientfiles/:id', controller.getOneClientfile);
+router.post('/clientfiles', controller.createClientfile);
+router.delete("/clientfiles/:id", controller.deleteClientfile);
+router.patch("/clientfiles/:id", controller.updateClientfile);
 
+router.get('/brokeragee', controller.getAlluseraccess);
 
   /*
 // Not Found Middleware (404)
