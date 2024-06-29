@@ -37,6 +37,7 @@ import express from 'express';
 import { createServer } from 'http';
 import pkg from 'pg';
 import bodyParser from 'body-parser';
+import session from 'express-session';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -47,6 +48,17 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended : true}));
 app.use(express.json());
+
+// configure the middleware that manages sessions
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false },
+  })
+);
+
 
 const pool = new Pool({
   connectionString: process.env.PG_URL,
