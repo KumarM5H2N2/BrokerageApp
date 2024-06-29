@@ -49,6 +49,23 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended : true}));
 app.use(express.json());
 
+// you can define global variables in the application that will always be available in the views
+app.locals.siteName = "BrokerageApp";
+
+
+
+
+// configure the view rendering engine
+app.set("view engine", "ejs");
+app.set("views", "./app/views");
+
+// configure the folder containing static files (images, css, etc.)
+app.use(express.static("public"));
+
+
+
+
+
 // configure the middleware that manages sessions
 app.use(
   session({
@@ -60,13 +77,12 @@ app.use(
 );
 
 
+
 const pool = new Pool({
   connectionString: process.env.PG_URL,
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
+
 
 // Inclure votre routeur
 import router from './app/routers/index.router.js';  // Vérifiez que le fichier router.js est bien à la racine

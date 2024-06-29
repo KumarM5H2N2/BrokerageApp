@@ -4,6 +4,23 @@ const router = Router();
 
 
 
+
+router.get("/", controller.getHomePage);
+// Route to render the signin page
+router.get("/signin", (req, res) => {
+  res.render('signin');
+});
+
+
+
+
+
+
+
+
+
+
+
 router.get('/clientfiles', controller.getAllclientfile);
 router.get('/clientfiles/:id', controller.getOneClientfile);
 router.post('/clientfiles', controller.createClientfile);
