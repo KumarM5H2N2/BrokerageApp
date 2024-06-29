@@ -1,4 +1,4 @@
-import { Clientfile } from "../models/clientfile.js";
+import { Clientfile } from "../models/index.js";
 
 
 export async function getHomePage(request, response)  {
@@ -29,3 +29,8 @@ export function notFound(request, response) {
       },
     });
   }
+
+  export default {
+    getHomePage,
+    notFound
+  };

@@ -1,15 +1,18 @@
 <%- include('partials/header') %>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h2 class="h1 display-4">Se connecter sur O'Quiz</h2>
-  <p class="lead">Une application sympa pour répondre à des questions cool.</p>
+  <h2 class="h1 display-4">Se connecter sur BrokerageApp</h2>
+  <p class="lead">Une application pour concrétiser vos projets</p>
 </div>
 <% if(locals.error ){%>
 <div class="alert alert-danger" role="alert"><%= locals.error %></div>
 <% } %>
 <div class="row">
   <div class="col-6 offset-3">
-    <form method="POST" class="form-signup">
+
+    <form action="/signin" method="POST" class="form-signin">
+
+ 
       <div class="form-label-group">
         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Votre courriel" />
         <label for="email">Votre courriel</label>

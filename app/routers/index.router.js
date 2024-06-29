@@ -6,18 +6,13 @@ const router = Router();
 
 
 router.get("/", controller.getHomePage);
-// Route to render the signin page
-router.get("/signin", (req, res) => {
-  res.render('signin');
-});
 
-
-
-
-
-
-
-
+// Route to authentification 
+router.get("/signup", controller.getAuthSignupPage);
+router.post("/signup", controller.postAuthSignupPage);
+router.get("/signin", controller.getAuthSigninPage);
+router.post("/signin", controller.postAuthSigninPage);
+router.get("/signout", controller.getSignout);
 
 
 
@@ -28,15 +23,14 @@ router.delete("/clientfiles/:id", controller.deleteClientfile);
 router.patch("/clientfiles/:id", controller.updateClientfile);
 
 
-
-
 router.get('/savingsdistributions', controller.getAllSavingsdistribution);
 router.post('/savingsdistributions', controller.createSavingsdistribution);
-
 /*
 Bonus 
 router.get("/clientfiles/:id/savingsdistribution", (savingsdistribution.getAllSavingsdistributionOfClientfile));
 */
+
+
 
 router.get('/brokeragee', controller.getAlluseraccess);
 

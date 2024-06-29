@@ -220,19 +220,6 @@ export async function updateClientfile(req, res) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default {
   getAllclientfile,
   getOneClientfile,

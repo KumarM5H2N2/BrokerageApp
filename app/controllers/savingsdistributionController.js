@@ -18,12 +18,12 @@ export async function getAllSavingsdistribution(req, res) {
   function getOrderFromQueryParams() {
     return req.query.order === 'desc' ? 'DESC' : 'ASC'; // Bonus : pouvoir choisir depuis le savingsdistribution en fonction de l'Id du client
   }
-}
+};
 
 
 
 
-  export async function createSavingsdistribution(req, res) {
+export async function createSavingsdistribution(req, res) {
     try {
       // Validation du corps de la requête
       const createSavingsdistributionSchema = Joi.object({
@@ -55,19 +55,18 @@ export async function getAllSavingsdistribution(req, res) {
       console.error("Error creating savingsdistribution:", error);
       res.status(500).json({ error: "Failed to create savingsdistribution" });
     }
-  }
+  };
   
-  async function doesClientfileExist(id) {
+async function doesClientfileExist(id) {
     const clientfile = await Clientfile.findByPk(id);
     return !!clientfile; // Si clientfile est null, retourne false; sinon, retourne true.
-  }
+  };
   
 
 
 
 
-
-  export default {
-    getAllSavingsdistribution,
-    createSavingsdistribution
+export default {
+getAllSavingsdistribution,
+createSavingsdistribution
   };
