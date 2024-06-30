@@ -97,7 +97,24 @@ export const postAuthSigninPage = async (request, response) => {
 
 
 
-  export const getSignout = async (_, response) => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  export const getSignout = async (request, response) => {
     request.session.destroy(() => {
       response.redirect("/");
 

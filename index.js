@@ -38,6 +38,9 @@ import { createServer } from 'http';
 import pkg from 'pg';
 import bodyParser from 'body-parser';
 import session from 'express-session';
+import userToLocals from './app/middlewares/userToLocals.js';
+
+
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -75,6 +78,10 @@ app.use(
     cookie: { secure: false },
   })
 );
+
+
+// on configure le middleware qui met à disposition l'utilisateur connecté dans les views
+app.use(userToLocals);
 
 
 

@@ -1,5 +1,10 @@
 import {Router} from 'express';
 import controller from '../controllers/index.js';
+import userToLocals from '../middlewares/userToLocals.js';
+import auth from '../middlewares/authorization.js';
+const { isConnected, isAdmin } = auth;
+
+
 const router = Router();
 
 
@@ -13,6 +18,8 @@ router.post("/signup", controller.postAuthSignupPage);
 router.get("/signin", controller.getAuthSigninPage);
 router.post("/signin", controller.postAuthSigninPage);
 router.get("/signout", controller.getSignout);
+
+router.get("/admin", isConnected,isAdmin, controller.getAdminPage);
 
 
 

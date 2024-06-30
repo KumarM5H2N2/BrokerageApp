@@ -20,8 +20,13 @@ Useraccess.init({
   password: {
     type: DataTypes.TEXT,
     allowNull: false
-  }
+  },
 
+
+ role: {
+    type: DataTypes.TEXT,
+    allowNull: true
+  }
 
 
  

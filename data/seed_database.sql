@@ -73,11 +73,13 @@ VALUES
 
 
 INSERT INTO "useraccess" 
-  (email, prenom, nom, password)
+  (email, prenom, nom, password, role)
 VALUES
-  ('jeanleduc@boursorama.fr', 'Jean', 'Leduc','motdepasse1'),
-  ('isabellepleux@socgen.fr', 'Isabelle','Pleux','motdepasse2'),
-  ('Bob@brokerage.fr', 'Bob','Guipasse','motdepasse3')
+  ('jeanleduc@boursorama.fr', 'Jean', 'Leduc','motdepasse1','member'),
+  ('isabellepleux@socgen.fr', 'Isabelle','Pleux','motdepasse2','member'),
+  ('Bob@brokerage.fr', 'Bob','Guipasse','motdepasse3','member'),
+  ('kumar.natesan@oclock.fr', 'Kumar','Natesan','Kum77.','admin'),
+  ('sandrine_piton@socgen.fr', 'Sandrine', 'Piton','point01','member')
 ;
 
 
