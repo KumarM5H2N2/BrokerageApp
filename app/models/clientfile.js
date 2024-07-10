@@ -58,5 +58,8 @@ Clientfile.init({
   tableName: "clientfile"
 });
 
+
+/*
 // To test it simply!
 Clientfile.findAll().then(res => console.log(res));
+*/

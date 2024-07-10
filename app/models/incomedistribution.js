@@ -22,5 +22,7 @@ Incomedistribution.init({
   tableName: "incomedistribution"
 });
 
+/*
 // To test it simply!
 Incomedistribution.findAll().then(res => console.log(res));
+*/

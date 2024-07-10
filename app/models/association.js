@@ -21,6 +21,7 @@ Savingsdistribution.belongsTo(Clientfile, {
     foreignKey:"clientfile_id"
 });
 
+/*
 // Test : à partir d'un clientfile je peux récupérer les savingsdistribution !
 Clientfile.findOne({ include: "savingsdistribution" }).then(res => console.log(res.toJSON()));
 
@@ -28,7 +29,7 @@ Clientfile.findOne({ include: "savingsdistribution" }).then(res => console.log(r
 
 // Test : à partir d'une carte, je peux récupérer sa liste 
 Savingsdistribution.findOne({ include: "clientfile" }).then(res => console.log(res.toJSON()));
-
+*/
 
 
 
@@ -57,9 +58,11 @@ Clientfile.belongsToMany(Useraccess,{
 });
 
 
+/*
 // Test : à partir d'un clientfile, je récupère tous ses useraccess
 Clientfile.findOne({ include: "useraccesss" }).then(res => console.log(res.toJSON()));
 
 
 // Test : à partir d'un useraccess, je récupère les clientfile associé à ce useraccess
 Useraccess.findOne({ include: "clientfiles" }).then(res => console.log(res.toJSON()));
+*/

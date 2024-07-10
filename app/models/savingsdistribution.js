@@ -26,5 +26,7 @@ Savingsdistribution.init({
   tableName: "savingsdistribution"
 });
 
+/*
 // To test it simply!
 Savingsdistribution.findAll().then(res => console.log(res));
+*/

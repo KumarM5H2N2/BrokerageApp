@@ -30,5 +30,8 @@ Creditdistribution.init({
   tableName: "creditdistribution"
 });
 
+
+/*
 // To test it simply!
 Creditdistribution.findAll().then(res => console.log(res));
+*/

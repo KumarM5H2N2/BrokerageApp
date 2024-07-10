@@ -35,5 +35,7 @@ Useraccess.init({
   tableName: "useraccess"
 });
 
+/*
 // To test it simply!
 Useraccess.findAll().then(res => console.log(res));
+*/

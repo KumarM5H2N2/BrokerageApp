@@ -26,5 +26,7 @@ Realestatedistribution.init({
   tableName: "realestatedistribution"
 });
 
+/*
 // To test it simply!
 Realestatedistribution.findAll().then(res => console.log(res));
+*/

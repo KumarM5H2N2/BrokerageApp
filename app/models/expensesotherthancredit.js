@@ -18,5 +18,8 @@ Expensesotherthancredit.init({
   tableName: "expensesotherthancredit"
 });
 
+
+/*
 // To test it simply!
 Expensesotherthancredit.findAll().then(res => console.log(res));
+*/
