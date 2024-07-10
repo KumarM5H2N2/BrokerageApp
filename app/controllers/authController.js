@@ -65,7 +65,9 @@ export const postAuthSigninPage = async (request, response) => {
       const existingUser = await Useraccess.findOne({ where: { email } });
       if (existingUser) {
         const isValidPassword = await bcrypt.compare(password, existingUser.password);
-        if (isValidPassword) {
+       
+        if (isValidPassword ) {
+        
           if (remember === "on") {
             request.session.cookie.maxAge = 1000 * 60 * 60 * 24 * 7;
           }
@@ -81,7 +83,7 @@ export const postAuthSigninPage = async (request, response) => {
       }
 
       return response.render("signin", {
-        error: "Mot de passe ou email incorrect",
+        error: "Mot de passe ou emaily incorrect",
       });
     } catch (err) {
       console.log(err);

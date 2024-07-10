@@ -79,6 +79,11 @@ app.use(
   })
 );
 
+//Debugging for my session
+app.use((req, res, next) => {
+  console.log('Session:', req.session);
+  next();
+});
 
 // on configure le middleware qui met à disposition l'utilisateur connecté dans les views
 app.use(userToLocals);

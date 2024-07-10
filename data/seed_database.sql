@@ -73,21 +73,18 @@ VALUES
 
 
 INSERT INTO "useraccess" 
-  (email, prenom, nom, password, role)
+  (email, prenom, nom, role, password)
 VALUES
-  ('jeanleduc@boursorama.fr', 'Jean', 'Leduc','motdepasse1','member'),
-  ('isabellepleux@socgen.fr', 'Isabelle','Pleux','motdepasse2','member'),
-  ('Bob@brokerage.fr', 'Bob','Guipasse','motdepasse3','member'),
-  ('kumar.natesan@oclock.fr', 'Kumar','Natesan','Kum77.','admin'),
-  ('sandrine_piton@socgen.fr', 'Sandrine', 'Piton','point01','member')
-;
+('essai@gmail.com', 'moi', 'moi','testeur','moi123')
+  ;
+
 
 
 INSERT INTO "useraccess_has_clientfile" 
   (useraccess_id, clientfile_id) 
 VALUES 
-  (3, 1), -- Bob@brokerage.fr -- maxime85@laposte.net
-  (2, 2) -- isabellepleux@socgen.fr -- robert63@lycos.fr
+  (1, 1), -- Bob@brokerage.fr -- maxime85@laposte.net
+  (1, 2) -- isabellepleux@socgen.fr -- robert63@lycos.fr
  
 ;
 

@@ -93,6 +93,7 @@ CREATE TABLE "useraccess" (
   "email" text NOT NULL UNIQUE,
   "prenom" text NOT NULL,
   "nom" text NOT NULL,
+  "role" text NOT NULL DEFAULT 'member',
   
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
   "updated_at" TIMESTAMPTZ
