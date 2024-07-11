@@ -4,5 +4,5 @@
 
 
 ### Brokerage data recovry
-GET {{endpoint}}/brokerage
+GET {{endpoint}}/clientfiles
 

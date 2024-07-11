@@ -38,6 +38,7 @@ import { createServer } from 'http';
 import pkg from 'pg';
 import bodyParser from 'body-parser';
 import session from 'express-session';
+import cors from 'cors';
 import userToLocals from './app/middlewares/userToLocals.js';
 
 
@@ -48,6 +49,7 @@ dotenv.config();
 const { Pool } = pkg;
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended : true}));
 app.use(express.json());
@@ -79,11 +81,14 @@ app.use(
   })
 );
 
+/*
 //Debugging for my session
 app.use((req, res, next) => {
   console.log('Session:', req.session);
   next();
 });
+*/
+
 
 // on configure le middleware qui met à disposition l'utilisateur connecté dans les views
 app.use(userToLocals);
