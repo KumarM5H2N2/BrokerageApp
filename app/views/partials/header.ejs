@@ -9,7 +9,7 @@
   <!-- Reset CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
-  <!-- Really beautiful CSS -->
+  <!-- BrokerageApp CSS -->
   <link href="/css/style.css" rel="stylesheet" />
   <link href="/css/floating-labels.css" rel="stylesheet" />
 
@@ -24,7 +24,7 @@
       <span><%= locals.user.fullname %></span>
       <% } %>
       <a class="p-2 text-white" href="/">Accueil</a>
-      <a class="p-2 text-white" href="/tags">Fichier Client</a>
+      <a class="p-2 text-white" href="clientfiles">Fichier Client</a>
       <% if(locals.user && locals.user.role === 'admin'){ %>
       <a class="p-2 text-white" href="/admin">Administration</a>
       <% } %>

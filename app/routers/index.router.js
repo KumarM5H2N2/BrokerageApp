@@ -22,7 +22,7 @@ router.get("/signout", controller.getSignout);
 router.get("/admin", isConnected,isAdmin, controller.getAdminPage);
 
 
-
+// Route to CRUD about clientfiles 
 router.get('/clientfiles', controller.getAllclientfile);
 router.get('/clientfiles/:id', controller.getOneClientfile);
 router.post('/clientfiles', controller.createClientfile);
