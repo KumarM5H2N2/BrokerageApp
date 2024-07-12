@@ -4,9 +4,9 @@ import { Useraccess } from "../models/index.js";
 
   export async function getAdminPage(request, response)  {
     try {
-      // on récupère tous les quiz avec leur auteur
+      // on récupère tous les utilisateur 
       const users = await Useraccess.findAll();
-      // on renvoie le template home avec la liste des quiz
+      // on renvoie le template home avec la liste des utilisateur
       response.render("admin", { users });
     } catch (err) {
       console.log(err);

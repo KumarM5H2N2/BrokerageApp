@@ -99,7 +99,7 @@ export async function createClientfile(req, res) {
             firstname2,
             lastname2,
             datebirth2,
-            numberchild: parseInt(numberchild), // Assurez-vous de convertir numberchild en entier
+            numberchild: parseInt(numberchild), // convertir numberchild en entier
             maritalstatus,
             nationality,
             residencestatus,
